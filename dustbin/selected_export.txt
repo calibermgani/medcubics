@@ -1,0 +1,37 @@
+Selected Field Export
+
+1. Report Controller
+	Each listing pages
+	Assign the export fields as shown below.	
+		$export_fields = array('Transaction Date', 'Acc No', 'Patient Name', 'DOS', 'Rendering Provider', 'Facility', 'Payment Type', 'Check No', 'Check Date', 'Paid', 'Reference', 'User');
+
+	Every search export function
+		$disp_flds = isset($request['exp_flds']) ? (explode(",", $request['exp_flds'])) : [];
+
+
+2. popupmodal.blade
+	Uncomment the last commented block related with selected field export
+
+3. Export blades:
+	
+	Add the below condition for all fields.
+
+	@if(in_array('Field name',$disp_flds))		// Eg: @if(in_array('Transaction Date',$disp_flds))
+
+4. reports.js 
+	// Add the pageName here, pageName variable has to be added in that export page itself.
+	$(document).on('click', '.js_claim_export',function (e) {
+		console.log('pageName'+pageName);		
+		if (typeof pageName != 'undefined' && (pageName == 'charge_report' || pageName == 'payment_report') ) {
+			e.preventDefault();
+			$('#export_fields_model').modal('show');
+			return false;
+		}
+	});
+
+5. Report Blade
+	// Mention the export URL like below
+	<?php $expUrl = 'reports/charges/export/'; ?>
+	// Comment the drop down menu just below the export link
+	<?php /* @include('layouts.practice_module_export', ['url' => 'reports/charges/export/']) */ ?>
+	

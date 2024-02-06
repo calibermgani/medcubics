@@ -1,0 +1,293 @@
+body {
+    background-color: #f9f9f9;
+    min-height: 100vh; }
+
+.brand-wrapper {
+    margin-bottom: 25px;
+    text-align: center; }
+.brand-wrapper .logo {
+    height: 37px; }
+
+.login-card {
+    border: 0;
+    /*border-radius: 27.5px;*/
+    box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+    overflow: hidden; }
+.login-card-img {
+    border-radius: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+.login-card .card-body {
+    padding: 20px 60px 20px 60px; }
+@media (max-width: 422px) {
+    .login-card .card-body {
+        padding: 35px 24px; } }
+.login-card-description {
+    font-size: 24px;
+  color: #00877F;
+  font-weight: 600;
+  margin-bottom: 5px; }
+.login-card form {
+    max-width: 326px; }
+.login-card .form-control {
+    border: 1px solid #d5dae2;
+    padding: 1px 12px;
+/*    margin-bottom: 20px;*/
+    min-height: 30px;
+    font-size: 13px;
+    line-height: 15;
+    font-weight: normal; }
+
+.login-card .form-control::-webkit-input-placeholder {
+    color: #919aa3; }
+.login-card .form-control::-moz-placeholder {
+    color: #919aa3; }
+.login-card .form-control:-ms-input-placeholder {
+    color: #919aa3; }
+.login-card .form-control::-ms-input-placeholder {
+    color: #919aa3; }
+.login-card .form-control::placeholder {
+    color: #919aa3; }
+.login-card .login-btn {
+    padding: 13px 20px 12px;
+    background-color: #000;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 24px; }
+.login-card .login-btn:hover {
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000; }
+.login-card .forgot-password-link {
+    font-size: 14px;
+    color: #919aa3;
+    margin-bottom: 12px; }
+.login-card-footer-text {
+    font-size: 16px;
+    color: #0d2366;
+    margin-bottom: 60px; }
+@media (max-width: 767px) {
+    .login-card-footer-text {
+        margin-bottom: 24px; } }
+.login-card-footer-nav a {
+    font-size: 14px;
+    color: #919aa3; }
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+    background-color: #e8e8e8; /* or add it to the track */
+}
+/* Add a thumb */
+::-webkit-scrollbar-thumb {
+    background: #868686;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4);
+}
+
+/*# sourceMappingURL=login.css.map */
+
+
+
+
+
+/* Push Notifiaction */
+
+.snackbar-div, .snackbar-div {
+    visibility: hidden;
+    min-width: 350px;
+    max-width: 400px;
+    min-height: 50px;
+    color: #fff;
+    text-align: left;
+    border-radius: 2px;
+    padding:2px 16px;
+    position: fixed;
+    z-index: 1;
+    right: 1%;
+    top: 15px;
+    opacity: 1;
+    box-shadow: 0 8px 12px -10px black;
+    z-index: 9999999;
+    font-size: 13px;
+    border-radius: 6px;
+	background: springgreen;
+}
+
+.snackbar-alert, .snackbar-alert {
+    visibility:visible;
+    min-width: 250px;
+    max-width: 400px;
+    max-height: 450px;
+    min-height: 50px;
+    color: #646464;
+    background: #fff3d4;
+    text-align: left;
+    border-radius: 2px;
+    padding:2px 16px;
+    position: fixed;
+    z-index: 1;
+    right: 1%;
+    bottom: 35px;
+    opacity: 1;
+    box-shadow: 0 8px 12px -10px black;
+    z-index: 9999999;
+    font-size: 13px;
+    border-radius: 6px;
+    overflow-y:scroll;
+}
+.alertnotes-icon{z-index: 9999;position: fixed !important;right:20px;bottom:55px;box-shadow: 0 8px 6px -6px black;background: #fff3d4;padding:10px 14px;border-radius: 50%;}
+.snackbar-alert.success span:before{
+    content: "\f0f3";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+    left:15px;
+    position:absolute;
+    top:10px;
+    display: inline-block;
+    -moz-animation: pulse 2s infinite linear;
+    -o-animation: pulse 2s infinite linear;
+    -webkit-animation: pulse 2s infinite linear;
+    animation: ring 2s ease infinite;
+}
+
+/* .snackbar-div.success {
+    background: repeating-linear-gradient(
+        -55deg,
+        #dff0d8,
+        #dff0d8 10px,
+        #dbedd3 10px,
+        #dbedd3 20px
+        );
+    color:#454843;
+    border: 1px solid #97c883;
+    font-weight: 600;
+
+} */
+
+.snackbar-div.success {
+   background: springgreen;
+    color:#454843;
+    border: 0px solid #97c883;
+    font-weight: 600;
+
+}
+
+/* .snackbar-div.error {
+    background: repeating-linear-gradient(
+        -55deg,
+        #ebc8c4,
+        #ebc8c4 10px,
+        #ebcecb 10px,
+        #ebcecb 20px
+        );
+    font-weight: 600;
+    border: 1px solid #d48f88 !important;
+}*/
+
+.snackbar-div.error {
+    background: springgreen;
+    font-weight: 600;
+    border: 0px solid #d48f88 !important;
+}
+
+.snackbar-div.info {
+    /* background: repeating-linear-gradient(
+        -55deg,
+        #c1e2f0,
+        #c1e2f0 10px,
+        #bbdfee 10px,
+        #bbdfee 20px
+        ); */
+    background: #fff;
+    font-weight: 600;
+    border: 0px solid #d48f88 !important;
+    color:#454843 !important;
+}
+
+.snackbar-div.error p{color:#454843 !important;}
+
+
+
+.snackbar-div.success span {font-size:18px; color: #528a3c; text-transform: capitalize;}
+.snackbar-div.error span{font-size:18px; color: #de4635; text-transform: capitalize;}
+.snackbar-div.info span{font-size:18px; color: #4480ac; text-transform: capitalize;}
+
+.snackbar-div.success span:before{
+    content: "\f058";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+    left:15px;
+    position:absolute;
+    top:10px;
+    display: inline-block;
+    -moz-animation: pulse 2s infinite linear;
+    -o-animation: pulse 2s infinite linear;
+    -webkit-animation: pulse 2s infinite linear;
+    animation: pulse 2s infinite linear;
+}
+
+.snackbar-div.error span:before
+{
+    content: "\f057";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+    left:15px;
+    position:absolute;
+    top:10px;
+    -moz-animation: bounce 2s infinite linear;
+    -o-animation: bounce 2s infinite linear;
+    -webkit-animation: bounce 2s infinite linear;
+    animation: bounce 2s infinite linear;
+
+}
+
+.snackbar-div.info span:before
+{
+    content: "\f05a";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+    left:15px;
+    position:absolute;
+    top:10px;
+}
+
+.snackbar-div h3{margin-bottom: 5px !important; margin-left: 20px;}
+
+.snackbar-div.show, .snackbar-div.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}

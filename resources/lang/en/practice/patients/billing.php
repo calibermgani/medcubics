@@ -1,0 +1,31 @@
+<?php
+return [
+	"validation"	=> [
+			"dos_from"			=>	"Enter a date",
+			"doi_future"                    =>	"Should not be a future date",
+			"to_date"			=>	"Enter a date",
+			"cpt"				=>	"Procedure code is required field. Please enter the same",
+			"billing_provider"              =>	"Select billing provider",
+			"rendering_provider"            =>	"Select rendering provider",
+			"hold_reason_id"                =>	"Select hold reason",
+			"other_reason"                  =>	"Enter hold reason",
+			"icd1"				=>	"Diagnosis code is required field. Please enter the same.",
+			"facility_id"                   =>	"Select facility",
+			"insurance_id"                  =>	"Select insurance",
+			"pos_name"			=>	"Select admit date",
+			"admit_date"                    =>	"select valid admission date",
+			"copay"				=>	"Select Mode of payment",
+			"copay_amt"			=>	"Enter copay amount",
+			"anesthesia_start"              =>	"The start time must be earlier than the end time",
+			"anesthesia_stop"               =>	"The end time must be greater than the start time",
+			"icd1_0"			=>	"Enter ICD pointer",
+			'not_zero'                      =>  "Should not be zero",
+			"admit_date_dos"                =>  "Admission date should come before DOS",
+			"start_date"                    =>  "Start date is required",
+			"maximum_amt"                    =>  "Maximum limit reached",
+			"enter_admit_date"              => "Select admit date",
+			"cpt_search"                    => "No CPT available with searched criteria",
+			"anesthesia_start_time"         => "Enter start time",
+			"anesthesia_end_time"           => "Enter stop time",
+		]
+];

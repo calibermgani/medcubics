@@ -1,0 +1,105 @@
+<div class="box box-view no-shadow"><!--  Box Starts -->
+    <div class="box-header-view">
+
+        <i class="fa fa-newspaper-o" data-name="info"></i> <h3 class="box-title">Outstanding AR</h3>
+        <div class="pull-right">
+            <h3 class="box-title med-orange">{{ date("m/d/Y") }}</h3>
+        </div>
+    </div>
+    <div class="box-body no-padding">
+        @if($header !='' && count($header)>0)
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h3 class="text-center reports-heading p-l-2 margin-b-10">Outstanding AR</h3>
+            @foreach($header as $header_name => $header_val)
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-b-10 text-center">                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-b-6 no-padding">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 font600 text-center"><span class="med-green">{{ $header_name }}</span> : {{ $header_val }}</div>                    
+                </div>               
+            </div>
+            @endforeach
+        </div>
+
+        @endif
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <div class="box box-info no-shadow no-border">
+                <div class="box-body">
+                    <div class="table-responsive margin-t-10">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Acc No</th>
+                                    <th>Patient Name</th>
+                                    <th>Claim No</th>
+                                    <th>DOS</th>
+                                    @if(@$column->insurance =='')<th>Insurance</th>@endif
+                                    @if(@$column->billing =='')<th>Billing</th>@endif 
+                                    @if(@$column->rendering =='')<th>Rendering</th>@endif
+                                    @if(@$column->facility =='')<th>Facility</th>@endif 
+                                    <th>Billed($)</th>
+                                    @if(@$column->bal_patient =='')<th>Ins Paid($)</th>@endif
+                                    <th>Pat Paid($)</th>
+                                    <th>Adj($)</th>
+                                    <th>Total Bal($)</th>
+                                </tr>
+                            </thead>                
+                            <tbody>
+                                @php $count = 1;   @endphp  
+                                @foreach($claims as $claims_list)                       
+                                @php
+									$patient = @$claims_list->patient;
+									$set_title = (@$patient->title)? @$patient->title.". ":'';
+									$patient_name = 	$set_title.App\Http\Helpers\Helpers::getNameformat(@$patient->last_name,@$patient->first_name,@$patient->middle_name); 
+								@endphp 
+                                <tr style="cursor:default;">                              
+                                    <td>{{ @$claims_list->patient->account_no }}</td>                           
+                                    <td>{{ @$patient_name }}</td>                           
+                                    <td>{{@$claims_list->claim_number}}</td>
+                                    <td>{{date('m/d/Y',strtotime(@$claims_list->date_of_service))}}</td>
+                                    @if(@$column->insurance =='')
+                                    @if(empty(@$claims_list->insurance_details))
+                                    <td>Self</td>  
+                                    @else      
+									<?php @$insurance_name = App\Http\Helpers\Helpers::getInsuranceName($claims_list->insurance_id)?>
+									
+                                    <td>{{ @$insurance_name }}</td>
+                                    @endif  
+                                    @endif 
+                                    @if(@$column->billing =='')
+                                    <td> {{str_limit(@$claims_list->billing_provider->short_name,15,' ...')}}</td>
+                                    @endif
+                                    @if(@$column->rendering =='')
+                                    <td>{{str_limit(@$claims_list->rendering_provider->short_name,15,' ...')}}</td>
+                                    @endif
+
+                                    @if(@$column->facility =='')
+                                    <td>{{str_limit(@$claims_list->facility_detail->short_name,15,' ...')}}</td> 
+                                    @endif
+                                    <td class="text-right">{!! App\Http\Helpers\Helpers::priceFormat(@$claims_list->total_charge) !!}</td>
+                                    @if(@$column->bal_patient =='')
+                                    <td class="text-right">{!! App\Http\Helpers\Helpers::priceFormat(@$claims_list->insurance_paid) !!}</td>
+                                    @endif
+                                    <td class="text-right">{!! App\Http\Helpers\Helpers::priceFormat(@$claims_list->patient_paid) !!}</td>
+                                    <td class="text-right">{!! App\Http\Helpers\Helpers::priceFormat(@$claims_list->total_adjusted) !!}</td>
+                                    <td class="text-right">{!! App\Http\Helpers\Helpers::priceFormat(@$claims_list->balance_amt) !!}</td>
+                                </tr>
+                                @php $count++;   @endphp 
+                                @endforeach                  
+                            </tbody>
+                        </table>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin-t-20 no-padding margin-b-20 dataTables_info">
+                                Showing {{@$pagination->from}} to {{@$pagination->to}} of {{@$pagination->total}} entries
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right no-padding">{!! $pagination->pagination_prt !!}</div>
+                        </div>
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+            </div><!-- /.box -->
+        </div>
+    </div><!-- Box Body Ends --> 
+</div><!-- /.box Ends-->
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+    <input class="btn btn-medcubics-small" id="js_exit_part" value="Exit" type="button">
+</div>

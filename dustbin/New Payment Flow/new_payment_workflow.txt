@@ -1,0 +1,106 @@
+New Payment Work Flow steps:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Model files will be added under \medcubics_v1\app\Models\Payments\
+
+- Controller 	>>
+
+- Views		>>
+
+- Functions:
+	-> Add Claim
+	-> Update Claim
+	-> Post Payments
+	
+
+New tables:
+~~~~~~~~~~~	
+
+1.  CLAIM_INFO
+2.  CLAIM_ANESTHESIA
+3.  CLAIM_ADD_DETAILS
+4.  CLAIM_CPT_INFO
+5.  PMT_INFO	
+6.  PMT_CHECK_INFO
+7.  PMT_CARD_INFO
+8.  PMT_CLAIM_FIN
+9.  PMT_CLAIM_CPT_FIN
+10. PMT_CLAIM_TX
+11. PMT_CLAIM_CPT_TX
+
+
+New Payment Work Flow steps:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Flow starts commited by Revathi ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Charge create functions 
+=======================
+1. Anesthesia store process at CLAIM_ANESTHESIA table (If anesthesia given)
+2. Claim information store process at CLAIM_INFO table
+
+3. Claim details store process at CLAIM_ADD_DETAILS (If no claim details were given) 
+		if CLAIM_ADD_DETAILS added its id will be available and update claim id using its id
+4. Line item store process at at CLAIM_CPT_INFO table  (Need to write Trigger to created if not exist(PMT_CLAIM_FIN) and update if exists (PMT_CLAIM_FIN) for that specific claim)
+5. Line item financial data store process at PMT_CLAIM_CPT_FIN table
+6. Create a transaction claimwise at PMT_CLAIM_TX at table and pass its id to (PMT_CLAIM_CPT_TX)
+7. Create a transaction for cpt wise at PMT_CLAIM_CPT_TX table (Here Do updation at  PMT_CLAIM_CPT_FIN table with Trigger and Do updation at PMT_CLAIM_TX) 
+8. If notes available save at patient_notes table
+9. If copay Available the store payment information at (PMT_INFO, PMT_CHECK_INFO, PMT_CARD_INFO)
+10 IF Copay Update PMT_CLAIM_CPT_FIN with the paid information (Trigger update PMT_CLAIM_FIN)
+11 If copay update 1st  line item of PMT_CLAIM_CPT_TX (Trigger update PMT_CLAIMS_TX)
+
+Functions
+===========
+1. createAnesthesiaApi()
+2. storeClaimInfo()
+3. storeClaimDetails()
+4. storePmtClaimCptFin()
+5. storePmtClaimTx()
+6. storePmtClaimCptTx()
+7. storeClaimnotes()
+8. storePaymentInfoDetail()
+9. updatePmtClaimCptFin()
+10.updatePmtClaimCptTx()
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Flow ends commited by Revathi ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~ Charge Add Flow1 starts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When Copay Not given
+=====================
+
+1. Anesthesia store process at CLAIM_ANESTHESIA table (If anesthesia given)
+2. Claim information store process at CLAIM_INFO table and PMT_CLAIM_FIN table
+3. Claim details store process at CLAIM_ADD_DETAILS (If no claim details were given) 
+		if CLAIM_ADD_DETAILS added its id will be available and update claim id using its id
+4. Line item store process at at CLAIM_CPT_INFO table  and PMT_CLAIM_FIN (update PMT_CLAIM_FIN for each creation of record)table
+
+Description related table to display new charge created
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5. Need an entry at CLAIM_TX_DESC 
+6. Need an entry at CLAIM_CPT_TX_DESC (This table not yet designed)
+
+
+When copay given
+=================
+1. Anesthesia store process at CLAIM_ANESTHESIA table (If anesthesia given)
+2. Claim information store process at CLAIM_INFO table and PMT_CLAIM_FIN table
+3. Claim details store process at CLAIM_ADD_DETAILS (If no claim details were given) 
+		if CLAIM_ADD_DETAILS added its id will be available and update claim id using its id
+4. Line item store process at at CLAIM_CPT_INFO table  and PMT_CLAIM_FIN (update PMT_CLAIM_FIN for each creation of record)table
+
+
+5. If copay Available the store payment information at (PMT_INFO, PMT_CHECK_INFO, PMT_CARD_INFO)
+6. Store data at PMT_CLAIM_CPT_TX (When ever we create this records check a record exist at this table PMT_CLAIM_TX with condition as claim_id and payment_id, if no record available create it if available update)
+
+Description related table to display new charge created
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5. Need an entry at CLAIM_TX_DESC 
+6. Need an entry at CLAIM_CPT_TX_DESC (This table not yet designed)
+
+~~~~~~~~~~~~~~~~~~~~~~~~ Charge Add Flow1 ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~ Charge Edit Flow starts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~ Charge Edit Flow ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

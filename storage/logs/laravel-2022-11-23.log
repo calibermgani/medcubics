@@ -1,0 +1,84 @@
+[2022-11-23 08:57:33] local.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:120)
+[stacktrace]
+#0 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(120): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\source\\\\medv2...', 120, Array)
+#1 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(988): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(121): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\source\\medv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2022-11-23 08:57:52] local.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:120)
+[stacktrace]
+#0 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(120): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\source\\\\medv2...', 120, Array)
+#1 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(988): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(121): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\source\\medv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2022-11-23 08:59:07] local.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:120)
+[stacktrace]
+#0 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(120): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\source\\\\medv2...', 120, Array)
+#1 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(988): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(121): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\source\\medv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2022-11-23 09:03:59] local.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:120)
+[stacktrace]
+#0 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(120): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\source\\\\medv2...', 120, Array)
+#1 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(988): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(121): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\source\\medv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2022-11-23 09:05:08] local.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:120)
+[stacktrace]
+#0 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(120): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\source\\\\medv2...', 120, Array)
+#1 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(988): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(121): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\source\\medv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2022-11-23 09:16:55] local.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:120)
+[stacktrace]
+#0 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(120): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\source\\\\medv2...', 120, Array)
+#1 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(988): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(121): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\source\\medv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\source\\medv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 

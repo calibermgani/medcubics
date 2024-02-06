@@ -1,0 +1,86 @@
+
+app\Traits\ClaimUtil
+
+
+To use this claimutil
+
+use App\Traits\ClaimUtil; // should include to make claim related Traits
+Add the above line in top
+
+with in the class add the below line.  
+use ClaimUtil; 
+
+Patient Related Functions:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- getPatientFinDetails($patient_id)		-	To get patient financial details
+  Param: $patient_id
+  Return: 
+	array('total_patient_paid', 'total_insurance_paid', 'total_charge_amt', 'total_patient_due','total_insurance_due','total_patient_adj','total_insurance_adj','total_withheld','total_ar')
+
+- getPatientWalletAmount($patient_id)		-	To get patient total wallet amount
+  Param: $patient_id
+  Return: 
+	amount / 0.0
+
+- getPatientWalletAmount($patient_id)		-	To get patient wallet amount
+
+- getPatientLastPaymentAmount($patient_id)	-	To get patient last payment amount
+    
+- getPatientLastPaymentDate($patient_id)	-	Last payment Date for patient.
+
+- getPatientLastPaymentType($patient_id)	-	Last payment Type 
+    
+- getPatientBalance($patient_id)		-	To get Patient Balance
+
+- getPatientDue($patient_id)			-	To get Patient Due
+
+- getPatientInsuranceDue($patient_id)		-	To get Patient insurance due
+    
+- getPatientARDue($patient_id)			-	To get Patient AR Due
+
+- getPatientBilledAmount($patient_id)		-	To get Patient Billed Amount	
+    
+- getPatientUnBilledAmount($patient_id)		-	To get Patient Unbilled Amount
+    
+- getPatientInsurancePayment($patient_id)	-	To get Patient Total insurance payment
+    
+- getPatientPayment($patient_id)		-	To get Patients toal patient payment 
+
+- getPatientLastStatmentDate($patient_id)	-	To get Patient Last statement date    
+
+- getPatientAgingDays($patient_id)		-	To get patient aging days
+       
+- getPatientARDays($patient_id)			-	To get Patient AR days
+
+- getPatientOutstandingAR($patient_id)		-	To get patient outstanding AR
+
+- getPatientInsuranceOutstandingAR($patient_id)	-	To get patient insurance outstanding AR
+
+
+Claims:
+~~~~~~
+
+- getClaimBilledAmount($claim_id)		-	To get claim billed amount
+
+- getClaimAllowedAmount($claim_id)		-	To get claim allowed amount	
+
+- getClaimPaidAmount($claim_id)			-	To get claim total paid amount
+
+- getClaimARDue($claim_id)			-	To get claim AR Due
+
+- getClaimAdjustmentAmount($claim_id)		-	To get claim total adjustment amount
+
+- getClaimFirstSubmissionDate($claim_id)	-	To get claim first submission date
+
+- getClaimLastSubmissionDate($claim_id)		-	To get claim last submission date
+
+- getClaimDos($claim_id)			-	To get claim dos date
+
+- getClaimInsuranceOverPayment($claim_id)	-	To get claim insurance over payment
+
+- getClaimInsuranceRefundAmount($claim_id)	-	To get claim insurance refund amount
+
+- getClaimPatientRefundAmount($claim_id)	-	To get claim patient refund amount
+
+

@@ -1,0 +1,72 @@
+/*
+ Fint Theme v0.0.4
+ FusionCharts JavaScript Library
+ 
+ Copyright FusionCharts Technologies LLP
+ License Information at <http://www.fusioncharts.com/license>
+ */
+(function (b) {
+    "object" === typeof module && "undefined" !== typeof module.exports ? module.exports = b : b(FusionCharts)
+})
+        (function (b) {
+            b.register("theme", {name: "fint1", theme: {base: {chart: {paletteColors: "#44b4f8,#3ccfb7,#efd253,#fea500,#8e0000,#0e948c,#8cbb2c,#f3de00,#c02d00,#5b0101",
+                            labelDisplay: "auto",
+                            labelFontSize: "13",
+                            labelFontColor: "#999696",
+                            labelFontBold: "0",
+                            baseFontColor: "#999696",
+                            baseFontSize: "13",
+                            baseFont: "'Open Sans', sans-serif",
+                            use3dlighting: "0",
+                            showPlotBorder: "0",
+                            // outCnvBaseFontSize:"16",
+                            // outCnvBaseFontColor:"#00877f",
+                            captionFontSize: "20",
+                            subcaptionFontSize: "16",
+                            subcaptionFontBold: "0",
+                            usePlotGradientColor: "0",
+                            showBorder: "0",
+                            showShadow: "0",
+                            showvalues: "0",
+                            showLegend: "1",
+                            canvasBgColor: "#ffffff",
+                            showCanvasBorder: "0",
+                            toolTipColor: "#ffffff",
+                            toolTipBorderThickness: "0",
+                            toolTipBgColor: "#000000",
+                            toolTipBgAlpha: "85",
+                            toolTipBorderRadius: "4",
+                            toolTipPadding: "10", 
+                            legendBgAlpha: "10",
+                            legendBgColor: "#00877f",
+                            legendBorderAlpha: "1",
+                            legendShadow: "1",
+                            legendItemFontSize: "13",
+                            legendBorderRadius: "4",
+                            legendItemFontColor: "#666666",
+                            legendCaptionFontSize: "20",
+                            legendItemHoverFontColor: "#00877f",
+                            legendshadow: "1",                            
+                            legendPosition: "bottom",
+                            legendAllowDrag: "1",
+                            legendIconScale: "1",
+                            divlineAlpha: "20",
+                            divlineColor: "#999999",
+                            divlineThickness: "1",
+                            divLineIsDashed: "1",
+                            divLineDashLen: "1",
+                            divLineGapLen: "1",
+                            scrollheight: "10",
+                            flatScrollBars: "1",
+                            xAxisNameFontSize: "14",
+                            xAxisNameFontBold: "1",
+                            xAxisNameFontColor: "#00877f",
+                            labelPadding: "5",
+                            yAxisNameFontSize: "14",
+                            yAxisNameFontBold: "1",
+                            yAxisNameFontColor: "#00877f",
+                            showAlternateHgridColor: "0",
+                            alternateHGridColor: "00877f",
+                            alternateHGridAlpha: "5",                           
+                            scrollShowButtons: "0"}}}})
+        });

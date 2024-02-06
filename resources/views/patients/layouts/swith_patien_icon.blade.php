@@ -1,0 +1,1 @@
+<li><a href="#js-model-swith-patient" accesskey="s" data-toggle="modal" data-target="#js-model-swith-patient" tabindex="-1"><i class="fa fa-search" data-placement="bottom" data-toggle="tooltip" data-original-title="Search Patient"></i></a></li>

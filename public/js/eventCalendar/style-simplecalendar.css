@@ -1,0 +1,169 @@
+
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.calendar-container {
+    height: 538px;
+    left: 50%;
+    margin: -255px 0 0 -245px;
+    position: absolute;
+    top: 45%;
+    width: 510px;
+}
+.fullcalendar header,.fullcalendar #today_name{ 
+    text-align: center;
+    font-size:14px;    
+    padding: 5px;
+    font-weight: 600;
+    border-bottom: 2px solid #00877f;
+    background: #d9f8f6;
+    border-radius: 4px 4px 0px 0px;
+}
+.fullcalendar td {
+    border: 0px solid red;    
+    line-height: 4px;
+    text-align: center;
+    display: inline-block;
+   
+    float: left;
+    padding: 1em;
+    font-weight: 500;
+    color: #646464;
+    font-size: 13px;   
+}
+.fullcalendar .btn-prev,.fullcalendar .btn-next {
+    position: absolute;
+  
+}
+.fullcalendar .btn-prev {
+    
+}
+
+.fullcalendar .btn-next {
+      
+}
+.fullcalendar .btn-prev:hover{
+	
+}
+.fullcalendar .btn-next:hover{
+   
+}
+.fullcalendar .event-days td
+{ 
+    font-size: 14px;
+    color:#00837C;
+   width:14.2%;
+}
+.js_profile_calendar{cursor:pointer;}
+.calendar header,.calendar #today_name{ text-align: center;}
+
+.calendar h2, .calendar p{ text-align: justify;}
+.calendar textarea,.calendar #edit-title{ width:100%;border: 1px solid #85E2E6;font-size: 13px;margin: 10px 0px;}
+.calendar textarea,.calendar input,.calendar label{ margin: 5px 0px;}
+.calendar input::-webkit-input-placeholder { font-size:12px;}
+.calendar input::-moz-placeholder { font-size:12px;}
+.calendar input:-ms-input-placeholder { font-size:12px;}
+.calendar input:-moz-placeholder { font-size:12px;}
+.calendar textarea:focus{
+    outline: none;
+}
+.calendar header {
+    position: relative;
+}
+.calendar tbody td:hover {
+    cursor: pointer;
+}
+
+.calendars tbody td.active, .calendar tbody td.active {
+    background: #fad8b5;
+    border-radius: 4px;   
+    font-weight: 600 !important;
+    color: #DC7103 !important;   
+}
+.calendars tbody.event-calendar td{cursor:pointer; width:14.2%; color:#949494;}
+.calendars tbody.event-calendar td:hover{color:#00877f;}
+.calendar td {
+	border: 0px solid red;
+    
+    line-height: 20px;
+    text-align: center;
+    display: inline-block;
+   
+    float: left;
+    padding:10px;
+    font-weight: 500;
+    color: #646464;
+    font-size: 14px;
+}
+
+.event {
+    cursor: pointer;
+    position: relative;
+}
+
+.event:after {
+    background: #00877f;
+    border-radius: 50%;
+    bottom: 2px;
+    display: block;
+    content: '';
+    height: 4px;
+    left: 47%;
+    position: absolute;
+    width: 4px;
+}
+.btn-prev,.btn-next {
+	
+	
+
+}
+.btn-prev {
+    left: 10px;
+	font-size: 20px;
+}
+
+.btn-next {
+    right: 10px;
+  font-size: 20px;
+}
+.add_events{font-size: 13px; width: 100%;}
+.day-event {
+    background-color: #fff;
+	float: left;
+    width: 100%;
+    padding-top: 10px;
+    display:none;
+	border-bottom: 1px dashed #ccc;
+}
+.day-event p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.day-event span{
+    font-size: 13px;
+}
+
+.cleanslate a, .cleanslate a *{
+    cursor:pointer !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #00877f;
+    text-decoration: none !important;    
+    color: #00877f;
+    padding: 2px 6px;
+    font-size: 13px;
+}
+.cleanslate a:hover {
+	 background-color: #00877f;
+	 border-color: #00877f !important;
+	 color:#fff !important;
+}
+
+.selectedDay{
+	 background-color: #00877f;
+	 border-color: #00877f !important;
+	 color:#fff !important;
+}

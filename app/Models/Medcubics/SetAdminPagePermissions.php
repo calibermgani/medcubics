@@ -1,0 +1,26 @@
+<?php namespace App\Models\Medcubics;
+
+use Illuminate\Database\Eloquent\Model;
+
+class SetAdminPagePermissions extends Model {
+    
+        protected $table = 'set_adminpagepermissions';
+		
+		protected $connection = 'responsive';	
+
+	protected $fillable = ['role_id', 'page_permission_id'];
+	
+	public static function boot() {
+       parent::boot();
+       // create a event to happen on saving
+       static::saving(function($table)  {
+            foreach ($table->toArray() as $name => $value) {
+                if (empty($value) && $name <> 'deleted_at') {
+                    $table->{$name} = '';
+                }
+            }
+            return true;
+       });
+    }
+	
+}
